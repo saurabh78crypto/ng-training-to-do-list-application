@@ -71,7 +71,7 @@ Create a `.env` file in the root of the `backend` directory with the following:
 ```
 PORT=5000
 Mongo_URI=mongodb://localhost:27017/todo-app
-
+```
 
 Make sure to replace `mongodb://localhost:27017/todo-app` with your actual MongoDB connection string if you're using a cloud instance.
 
@@ -88,7 +88,7 @@ Make sure to replace `mongodb://localhost:27017/todo-app` with your actual Mongo
 3. Start the backend server:
     ```
     npm start
-
+    
 
 The server should now be running on http://localhost:5000.
 

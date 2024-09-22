@@ -5,7 +5,6 @@ import Task from '../models/Task.js';
 
 const chai = use(chaiHttp);
 
-
 describe('Task Controller', () => {
   let taskId;
 

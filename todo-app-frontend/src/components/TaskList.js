@@ -12,9 +12,8 @@ const TaskList = () => {
   const [showDeleteModal, setShowDeleteModal] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
 
-  // Pagination state
   const [currentPage, setCurrentPage] = useState(1);
-  const tasksPerPage = 5; // Adjust as needed
+  const tasksPerPage = 5; 
 
   useEffect(() => {
     fetchTasks();
@@ -41,7 +40,7 @@ const TaskList = () => {
         task.priority.toLowerCase().includes(query.toLowerCase())
       )
     );
-    setCurrentPage(1); // Reset to the first page after search
+    setCurrentPage(1); 
   };
 
   const handleEdit = (task) => {
@@ -67,11 +66,10 @@ const TaskList = () => {
     }
   };
 
-  // Date formatting function
   const formatDate = (dateStr) => {
     const date = new Date(dateStr);
     const day = String(date.getDate()).padStart(2, '0');
-    const month = String(date.getMonth() + 1).padStart(2, '0'); // January is 0!
+    const month = String(date.getMonth() + 1).padStart(2, '0'); 
     const year = date.getFullYear();
     return `${day}/${month}/${year}`;
   };
@@ -144,7 +142,6 @@ const TaskList = () => {
         <DeleteModal task={selectedTask} onClose={() => setShowDeleteModal(false)} confirmDelete={confirmDelete} />
       )}
 
-      {/* Pagination Controls */}
       <div className="d-flex justify-content-end">
         <Pagination>
           <Pagination.Prev 

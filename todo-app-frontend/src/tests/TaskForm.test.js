@@ -16,7 +16,7 @@ describe('TaskForm Component', () => {
   });
 
   test('submits form with correct data', async () => {
-    taskService.addTask.mockResolvedValueOnce(); // Mock API call
+    taskService.addTask.mockResolvedValueOnce();
     render(<TaskForm onClose={() => {}} fetchTasks={mockFetchTasks} />);
     
     await act(async () => {
@@ -26,6 +26,6 @@ describe('TaskForm Component', () => {
       fireEvent.click(screen.getByText(/Save/i));
     });
 
-    expect(mockFetchTasks).toHaveBeenCalled(); // Ensure fetchTasks is called on submission
+    expect(mockFetchTasks).toHaveBeenCalled(); 
   });
 });

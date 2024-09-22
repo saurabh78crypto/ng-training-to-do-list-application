@@ -1,4 +1,3 @@
-/* General Styling */
 .table {
   margin-top: 20px;
 }
@@ -15,31 +14,26 @@
   text-align: center;
 }
 
-/* Table responsive styling */
 .table thead {
   display: table-header-group;
 }
 
-/* Mobile responsive layout for table */
 @media (max-width: 768px) {
   .table, .table thead, .table tbody, .table th, .table td, .table tr {
     display: block;
     width: 100%;
   }
 
-  /* Hide table headers on mobile */
   .table thead {
     display: none;
   }
 
-  /* Table rows become "cards" */
   .table tbody tr {
     display: block;
     margin-bottom: 10px;
     border-bottom: 1px solid #ddd;
   }
 
-  /* Add labels to each row's data */
   .table td {
     display: flex;
     justify-content: space-between;
@@ -50,19 +44,17 @@
   }
 
   .table td::before {
-    content: attr(data-label); /* Use data-label attribute for the labels */
+    content: attr(data-label); 
     flex: 1;
     font-weight: bold;
     padding-right: 10px;
   }
 
-  /* Full-width buttons on mobile */
   .btn-custom {
     width: 100%;
     margin-bottom: 10px;
   }
 
-  /* Modals remain responsive */
   .modal-dialog {
     width: 95%;
     margin: auto;

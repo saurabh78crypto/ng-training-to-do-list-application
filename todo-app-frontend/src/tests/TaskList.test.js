@@ -41,6 +41,6 @@ describe('TaskList Component', () => {
     const newTaskButton = screen.getByText(/New Task/i);
     fireEvent.click(newTaskButton);
     
-    expect(await screen.findByRole('dialog')).toBeInTheDocument(); // Check for modal dialog
+    expect(await screen.findByRole('dialog')).toBeInTheDocument();
   });
 });

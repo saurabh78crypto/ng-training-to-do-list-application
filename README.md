@@ -11,7 +11,6 @@ This project is a Full Stack To-Do List Application, which allows users to manag
 - [Backend Setup](#backend-setup)
 - [Frontend Setup](#frontend-setup)
 - [Running Tests](#running-tests)
-- [License](#license)
 
 ## Features
 
@@ -26,7 +25,6 @@ This project is a Full Stack To-Do List Application, which allows users to manag
 - Task listing with filtering and pagination.
 - Ability to create new tasks, edit existing tasks, and delete tasks.
 - Modal forms for creating and editing tasks.
-- Toast notifications for feedback (can be disabled or removed as needed).
 - Search functionality to filter tasks by assigned person, status, due date, or priority.
 
 ## Technologies Used
@@ -79,7 +77,7 @@ Make sure to replace `mongodb://localhost:27017/todo-app` with your actual Mongo
 
 1. Navigate to the `backend` directory:
    ```bash
-   cd backend
+   cd todo-app-backend
 
 2. Install dependencies:
     ```
@@ -92,7 +90,53 @@ Make sure to replace `mongodb://localhost:27017/todo-app` with your actual Mongo
 
 The server should now be running on http://localhost:5000.
 
-GET /api/tasks - Fetch all tasks.
-POST /api/tasks - Create a new task.
-PUT /api/tasks/:id - Update a task.
-DELETE /api/tasks/:id - Delete a task.
+The following REST API endpoints are available:
+- GET /api/tasks - Fetch all tasks.
+- POST /api/tasks - Create a new task.
+- PUT /api/tasks/:id - Update a task.
+- DELETE /api/tasks/:id - Delete a task.
+
+## Frontend Setup
+
+1. Navigate to the `frontend` directory:
+   ```bash
+   cd todo-app-frontend
+
+2. Install dependencies:
+    ```
+    npm install
+
+3. Start the frontend application:
+    ```
+    npm start
+    
+The server should now be running on http://localhost:3000.
+
+It will communicate with the backend API at http://localhost:5000/api/tasks.
+
+## Running Both Backend and Frontend Together
+To run both the frontend and backend at the same time, open two terminal windows:
+- In the first window, navigate to the `backend` directory and run:
+    ```
+    npm start
+
+- In the second window, navigate to the `frontend` directory and run:
+    ```
+    npm start
+
+Now both the backend and frontend will be running concurrently.
+
+## Running Tests
+
+### Backend Tests
+The backend uses Jest for testing. To run the tests, navigate to the `backend` directory and run:
+```
+npm test
+```
+
+### Frontend Tests
+The frontend uses Jest and React Testing Library. To run the tests, navigate to the frontend directory and run:
+```
+npm test
+```
+You can find the test files in the src/tests/ directory.
